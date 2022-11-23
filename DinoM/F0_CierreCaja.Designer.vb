@@ -369,8 +369,8 @@ Partial Class F0_CierreCaja
         Me.SuperTabControl2.ControlBox.MenuBox.Name = ""
         Me.SuperTabControl2.ControlBox.Name = ""
         Me.SuperTabControl2.ControlBox.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.SuperTabControl2.ControlBox.MenuBox, Me.SuperTabControl2.ControlBox.CloseBox})
-        Me.SuperTabControl2.Controls.Add(Me.SuperTabControlPanel3)
         Me.SuperTabControl2.Controls.Add(Me.SuperTabControlPanel4)
+        Me.SuperTabControl2.Controls.Add(Me.SuperTabControlPanel3)
         Me.SuperTabControl2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.SuperTabControl2.Location = New System.Drawing.Point(0, 0)
         Me.SuperTabControl2.Margin = New System.Windows.Forms.Padding(2)
@@ -665,9 +665,9 @@ Partial Class F0_CierreCaja
         Me.LabelX6.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX6.Location = New System.Drawing.Point(8, 85)
         Me.LabelX6.Name = "LabelX6"
-        Me.LabelX6.Size = New System.Drawing.Size(96, 18)
+        Me.LabelX6.Size = New System.Drawing.Size(85, 18)
         Me.LabelX6.TabIndex = 239
-        Me.LabelX6.Text = "Monto Inicial $:"
+        Me.LabelX6.Text = "M. Inicial Bs.:"
         Me.LabelX6.TextAlignment = System.Drawing.StringAlignment.Far
         '
         'tbMontoInicial
@@ -699,7 +699,6 @@ Partial Class F0_CierreCaja
         Me.LabelX14.TabIndex = 237
         Me.LabelX14.Text = "Tipo Cambio:"
         Me.LabelX14.TextAlignment = System.Drawing.StringAlignment.Far
-        Me.LabelX14.Visible = False
         '
         'Tb_TipoCambio
         '
@@ -714,7 +713,6 @@ Partial Class F0_CierreCaja
         Me.Tb_TipoCambio.Name = "Tb_TipoCambio"
         Me.Tb_TipoCambio.Size = New System.Drawing.Size(132, 21)
         Me.Tb_TipoCambio.TabIndex = 236
-        Me.Tb_TipoCambio.Visible = False
         '
         'cbbanco
         '
@@ -954,7 +952,7 @@ Partial Class F0_CierreCaja
         '
         Me.GroupPanel5.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.GroupPanel5.TabIndex = 382
-        Me.GroupPanel5.Text = "TOTALES  $"
+        Me.GroupPanel5.Text = "TOTALES  BS."
         '
         'Panel6
         '
@@ -1002,6 +1000,7 @@ Partial Class F0_CierreCaja
         Me.LabelX21.Size = New System.Drawing.Size(140, 23)
         Me.LabelX21.TabIndex = 70
         Me.LabelX21.Text = "T. Pagos Préstamos(-)"
+        Me.LabelX21.Visible = False
         '
         'tbTPagosPrestamos
         '
@@ -1018,6 +1017,7 @@ Partial Class F0_CierreCaja
         Me.tbTPagosPrestamos.Name = "tbTPagosPrestamos"
         Me.tbTPagosPrestamos.Size = New System.Drawing.Size(120, 23)
         Me.tbTPagosPrestamos.TabIndex = 69
+        Me.tbTPagosPrestamos.Visible = False
         '
         'LabelX17
         '

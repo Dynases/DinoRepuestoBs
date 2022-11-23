@@ -108,7 +108,8 @@ Public Class F0_PagosCreditoCompraUlt
     Private Sub _prhabilitar()
         grcobranza.Enabled = False
         tbnrodoc.ReadOnly = False
-        'tbfecha.IsInputReadOnly = False
+        tbfecha.IsInputReadOnly = False
+        tbfecha.Enabled = True
         tbObservacion.ReadOnly = False
 
 
@@ -166,7 +167,7 @@ Public Class F0_PagosCreditoCompraUlt
             .Visible = True
         End With
         With grcobranza.RootTable.Columns("total")
-            .Caption = "Total $"
+            .Caption = "Total Bs."
             .Width = 100
             .TextAlignment = TextAlignment.Far
             .HeaderAlignment = TextAlignment.Far
@@ -295,7 +296,7 @@ Public Class F0_PagosCreditoCompraUlt
             .Visible = True
             .TextAlignment = TextAlignment.Far
             .HeaderAlignment = TextAlignment.Far
-            .Caption = "Pendiente $"
+            .Caption = "Pendiente Bs."
         End With
 
         With grfactura.RootTable.Columns("NroDoc")
@@ -311,7 +312,7 @@ Public Class F0_PagosCreditoCompraUlt
             .Visible = True
         End With
         With grfactura.RootTable.Columns("PagoAc")
-            .Caption = "Total Pagado $"
+            .Caption = "Total Pagado Bs."
             .Width = 180
             .FormatString = "0.00"
             .TextAlignment = TextAlignment.Far
@@ -486,7 +487,7 @@ Public Class F0_PagosCreditoCompraUlt
             .Visible = True
         End With
         With grPendiente.RootTable.Columns("totalfactura")
-            .Caption = "Total $"
+            .Caption = "Total Bs."
             .Width = 120
             .MaxLength = 100
             .FormatString = "0.00"
@@ -495,7 +496,7 @@ Public Class F0_PagosCreditoCompraUlt
             .Visible = True
         End With
         With grPendiente.RootTable.Columns("pendiente")
-            .Caption = "Pendiente Pago $"
+            .Caption = "Pendiente Pago Bs."
             .Width = 140
             .FormatString = "0.00"
             .TextAlignment = TextAlignment.Far
@@ -558,7 +559,7 @@ Public Class F0_PagosCreditoCompraUlt
             .Visible = True
         End With
         With grpagos.RootTable.Columns("tdmonto")
-            .Caption = "Pagos $"
+            .Caption = "Pagos Bs."
             .HeaderAlignment = TextAlignment.Far
             .Width = 180
             .FormatString = "0.00"
@@ -858,7 +859,7 @@ Public Class F0_PagosCreditoCompraUlt
 
 
         Dim li As String = Facturacion.ConvertirLiteral.A_fnConvertirLiteral(CDbl(ParteEntera)) + " con " +
-        IIf(ParteDecimal.ToString.Equals("0"), "00", ParteDecimal.ToString) + "/100 Dólares"
+        IIf(ParteDecimal.ToString.Equals("0"), "00", ParteDecimal.ToString) + "/100 Bolivianos"
 
         P_Global.Visualizador = New Visualizador
 
@@ -892,7 +893,7 @@ Public Class F0_PagosCreditoCompraUlt
         End If
 
         Dim li As String = Facturacion.ConvertirLiteral.A_fnConvertirLiteral(CDbl(ParteEntera)) + " con " +
-        IIf(ParteDecimal.ToString.Equals("0"), "00", ParteDecimal.ToString) + "/100 Dólares"
+        IIf(ParteDecimal.ToString.Equals("0"), "00", ParteDecimal.ToString) + "/100 Bolivianos"
 
         P_Global.Visualizador = New Visualizador
 

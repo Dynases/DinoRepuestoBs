@@ -157,7 +157,7 @@ Public Class F0_CierreCaja
                 .Width = 130
                 .FormatString = "0.00"
                 .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
-                .Visible = False
+                .Visible = True
                 .Position = 3
             End With
             With Dgv_Cortes.RootTable.Columns("cdCantB")
@@ -165,7 +165,7 @@ Public Class F0_CierreCaja
                 .Width = 130
                 .FormatString = "0"
                 .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
-                .Visible = False
+                .Visible = True
                 .Position = 4
             End With
             With Dgv_Cortes.RootTable.Columns("cdTotalB")
@@ -174,7 +174,7 @@ Public Class F0_CierreCaja
                 .FormatString = "0.00"
                 .AggregateFunction = AggregateFunction.Sum
                 .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
-                .Visible = False
+                .Visible = True
                 .Position = 5
             End With
             With Dgv_Cortes.RootTable.Columns("cdCorteD")
@@ -269,7 +269,7 @@ Public Class F0_CierreCaja
 
             End With
             With Dgv_Depositos.RootTable.Columns("ceMonto")
-                .Caption = "MONTO $"
+                .Caption = "MONTO Bs."
                 .Width = 150
                 .AggregateFunction = AggregateFunction.Sum
                 .FormatString = "0.00"
@@ -313,7 +313,7 @@ Public Class F0_CierreCaja
             With Dgv_VentasPagos.RootTable.Columns("contado")
                 .Caption = "CONTADO BS."
                 .Width = 120
-                .Visible = False
+                .Visible = True
                 .FormatString = "0.00"
                 .AggregateFunction = AggregateFunction.Sum
                 .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
@@ -328,7 +328,7 @@ Public Class F0_CierreCaja
 
             End With
             With Dgv_VentasPagos.RootTable.Columns("credito")
-                .Caption = "CRÉDITO"
+                .Caption = "CRÉDITO BS."
                 .Width = 120
                 .Visible = True
                 .FormatString = "0.00"
@@ -337,7 +337,7 @@ Public Class F0_CierreCaja
             End With
 
             With Dgv_VentasPagos.RootTable.Columns("tarjeta")
-                .Caption = "TRANSFERENCIA $"
+                .Caption = "TRANSFERENCIA BS."
                 .Width = 150
                 .Visible = True
                 .FormatString = "0.00"
@@ -345,7 +345,7 @@ Public Class F0_CierreCaja
                 .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
             End With
             With Dgv_VentasPagos.RootTable.Columns("pagosCliente")
-                .Caption = "PAGOS CLIENTES $"
+                .Caption = "PAGOS CLIENTES BS."
                 .Width = 140
                 .Visible = True
                 .FormatString = "0.00"
@@ -370,7 +370,7 @@ Public Class F0_CierreCaja
             With Dgv_VentasPagos.RootTable.Columns("totalbs")
                 .Caption = "TOTAL VENTA BS."
                 .Width = 150
-                .Visible = False
+                .Visible = True
                 .FormatString = "0.00"
                 .AggregateFunction = AggregateFunction.Sum
                 .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
@@ -379,7 +379,7 @@ Public Class F0_CierreCaja
             With Dgv_VentasPagos.RootTable.Columns("total$")
                 .Caption = "TOTAL $"
                 .Width = 150
-                .Visible = True
+                .Visible = False
                 .FormatString = "0.00"
                 .AggregateFunction = AggregateFunction.Sum
                 .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
@@ -417,7 +417,7 @@ Public Class F0_CierreCaja
             With Dgv_VentasPagos.RootTable.Columns("contado")
                 .Caption = "CONTADO BS."
                 .Width = 120
-                .Visible = False
+                .Visible = True
                 .FormatString = "0.00"
                 .AggregateFunction = AggregateFunction.Sum
                 .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
@@ -432,7 +432,7 @@ Public Class F0_CierreCaja
 
             End With
             With Dgv_VentasPagos.RootTable.Columns("credito")
-                .Caption = "CRÉDITO"
+                .Caption = "CRÉDITO BS."
                 .Width = 120
                 .Visible = True
                 .FormatString = "0.00"
@@ -441,7 +441,7 @@ Public Class F0_CierreCaja
             End With
 
             With Dgv_VentasPagos.RootTable.Columns("tarjeta")
-                .Caption = "TRANSFERENCIA $"
+                .Caption = "TRANSFERENCIA BS."
                 .Width = 150
                 .Visible = True
                 .FormatString = "0.00"
@@ -449,7 +449,7 @@ Public Class F0_CierreCaja
                 .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
             End With
             With Dgv_VentasPagos.RootTable.Columns("pagosCliente")
-                .Caption = "PAGOS CLIENTE $"
+                .Caption = "PAGOS CLIENTE BS."
                 .Width = 140
                 .Visible = True
                 .FormatString = "0.00"
@@ -474,7 +474,7 @@ Public Class F0_CierreCaja
             With Dgv_VentasPagos.RootTable.Columns("totalbs")
                 .Caption = "TOTAL VENTA BS"
                 .Width = 150
-                .Visible = False
+                .Visible = True
                 .FormatString = "0.00"
                 .AggregateFunction = AggregateFunction.Sum
                 .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
@@ -483,7 +483,7 @@ Public Class F0_CierreCaja
             With Dgv_VentasPagos.RootTable.Columns("total$")
                 .Caption = "TOTAL $"
                 .Width = 120
-                .Visible = True
+                .Visible = False
                 .FormatString = "0.00"
                 .AggregateFunction = AggregateFunction.Sum
                 .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far

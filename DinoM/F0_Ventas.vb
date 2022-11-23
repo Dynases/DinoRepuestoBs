@@ -271,7 +271,7 @@ Public Class F0_Ventas
         ''  tbCliente.ReadOnly = False  por que solo podra seleccionar Cliente
         ''  tbVendedor.ReadOnly = False
         tbObservacion.ReadOnly = False
-        'tbFechaVenta.IsInputReadOnly = False
+        tbFechaVenta.IsInputReadOnly = False
         tbFechaVenc.IsInputReadOnly = False
         swMoneda.IsReadOnly = False
         swTipoVenta.IsReadOnly = False
@@ -632,7 +632,7 @@ Public Class F0_Ventas
         With grdetalle.RootTable.Columns("tbPrecioReferencia")
             .Width = 85
             .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
-            .Visible = True
+            .Visible = False
             .FormatString = "0.00"
             .Caption = "Pre. Fact."
             .AllowSort = False
@@ -640,7 +640,7 @@ Public Class F0_Ventas
         With grdetalle.RootTable.Columns("tbPorcentajeReferencia")
             .Width = 60
             .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
-            .Visible = True
+            .Visible = False
             .FormatString = "0.00"
             .Caption = "% Dif."
             .AllowSort = False
@@ -684,7 +684,7 @@ Public Class F0_Ventas
         With grdetalle.RootTable.Columns("tbporc")
             .Width = 80
             .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
-            .Visible = True
+            .Visible = False
             .FormatString = "0.00"
             .Caption = "P.Desc(%)"
             .AllowSort = False
@@ -1439,7 +1439,7 @@ Public Class F0_Ventas
                     End If
                 Else
                     If tbMontoDolar.Value > 0 Then
-                        If (Convert.ToDecimal(tbMontoDolar.Text) < Convert.ToDecimal(tbtotal.Text)) Then
+                        If (Convert.ToDecimal(tbMontoDolar.Text) * Convert.ToDecimal(cbCambioDolar.Text) < Convert.ToDecimal(tbtotal.Text)) Then
                             Dim img As Bitmap = New Bitmap(My.Resources.mensaje, 50, 50)
                             ToastNotification.Show(Me, "El monto Pagado en $ debe ser mayor o igual al Total General".ToUpper, img, 2000, eToastGlowColor.Red, eToastPosition.BottomCenter)
                             Return False

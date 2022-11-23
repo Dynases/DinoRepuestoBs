@@ -217,7 +217,7 @@ Public Class F0_BuscarProductos
             .Width = 80
             .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
             .Visible = True
-            .Caption = "Mecanico"
+            .Caption = "Mayorista"
             .FormatString = "0.00"
         End With
 

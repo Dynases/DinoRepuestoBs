@@ -956,9 +956,9 @@ Public Class F1_Productos
         listEstCeldas.Add(New Modelo.Celda("yffact", False))
         listEstCeldas.Add(New Modelo.Celda("yfhact", False))
         listEstCeldas.Add(New Modelo.Celda("yfuact", False))
-        listEstCeldas.Add(New Modelo.Celda("VentaFacturado", True, "V. Facturado", 80, "0.00"))
-        listEstCeldas.Add(New Modelo.Celda("VentaNormal", True, "V. Publico", 80, "0.00"))
-        listEstCeldas.Add(New Modelo.Celda("VentaMecanico", True, "V. Mecanico", 80, "0.00"))
+        listEstCeldas.Add(New Modelo.Celda("VentaFacturado", True, "P. Facturado", 80, "0.00"))
+        listEstCeldas.Add(New Modelo.Celda("VentaNormal", True, "P. Público", 80, "0.00"))
+        listEstCeldas.Add(New Modelo.Celda("VentaMecanico", True, "P. Mayorista", 80, "0.00"))
 
         listEstCeldas.Add(New Modelo.Celda("PrecioCosto", False))
         listEstCeldas.Add(New Modelo.Celda("yfcdprod1", False, "Descripcion".ToUpper, 150))
@@ -1538,28 +1538,28 @@ Public Class F1_Productos
             .Visible = True
         End With
         With JG_HistPrecios.RootTable.Columns("haPCosto")
-            .Caption = "P. Costo ($)"
+            .Caption = "P. Costo (Bs.)"
             .Width = 100
             .HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center
             .TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
             .FormatString = "0.00"
         End With
         With JG_HistPrecios.RootTable.Columns("haPVentaFact")
-            .Caption = "P. VentaFact. $"
+            .Caption = "P. VentaFact. Bs."
             .Width = 130
             .HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center
             .TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
             .FormatString = "0.00"
         End With
         With JG_HistPrecios.RootTable.Columns("haPVentaPublico")
-            .Caption = "P. Venta Público $"
+            .Caption = "P. Venta Público Bs."
             .Width = 150
             .HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center
             .TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
             .FormatString = "0.00"
         End With
         With JG_HistPrecios.RootTable.Columns("haPMecanico")
-            .Caption = "P. Mecánico $"
+            .Caption = "P. Mayorista Bs."
             .Width = 130
             .HeaderAlignment = Janus.Windows.GridEX.TextAlignment.Center
             .TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
@@ -1791,8 +1791,8 @@ Public Class F1_Productos
             If (tbPrecioFacturado.Value > 0) Then
                 Dim PrecioVentaFactura As Double
                 PrecioVentaFactura = tbPrecioFacturado.Value
-                tbPrecioVentaNormal.Value = PrecioVentaFactura - (PrecioVentaFactura * 0.1)
-                tbPrecioMecanico.Value = PrecioVentaFactura - (PrecioVentaFactura * 0.15)
+                'tbPrecioVentaNormal.Value = PrecioVentaFactura - (PrecioVentaFactura * 0.1)
+                'tbPrecioMecanico.Value = PrecioVentaFactura - (PrecioVentaFactura * 0.15)
             End If
         End If
     End Sub

@@ -148,6 +148,7 @@ Public Class F0_MCompras
         ''  tbVendedor.ReadOnly = False
         tbObservacion.ReadOnly = False
         tbFechaVenta.IsInputReadOnly = False
+        tbFechaVenta.Enabled = True
         tbFechaVenc.IsInputReadOnly = False
         tbFechaVenc.Enabled = True
         SwProforma.IsReadOnly = False
@@ -214,7 +215,7 @@ Public Class F0_MCompras
         swEmision.Value = False
         swConsigna.Value = False
         swRetencion.Value = False
-        swMoneda.Value = False
+        swMoneda.Value = True
         tbTipoCambio.Value = 1
 
         tbNFactura.Clear()
@@ -524,7 +525,7 @@ Public Class F0_MCompras
             .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
             .Visible = True
             .FormatString = "0.00"
-            .Caption = "P.CostoUn.($)"
+            .Caption = "P.CostoUn.(Bs.)"
         End With
         If (_estadoPor = 1) Then
             With grdetalle.RootTable.Columns("cbutven")
@@ -563,7 +564,7 @@ Public Class F0_MCompras
             .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
             .Visible = True
             .FormatString = "0.00"
-            .Caption = "Sub Total ($)"
+            .Caption = "Sub Total (Bs.)"
         End With
         With grdetalle.RootTable.Columns("cbobs")
             .Width = 50
@@ -611,21 +612,21 @@ Public Class F0_MCompras
             .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
             .Visible = True
             .FormatString = "0.00"
-            .Caption = "P.Facturado $"
+            .Caption = "P.Facturado Bs."
         End With
         With grdetalle.RootTable.Columns("cbpPublico")
             .Width = 140
             .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
             .Visible = True
             .FormatString = "0.00"
-            .Caption = "P.Público $"
+            .Caption = "P.Público Bs."
         End With
         With grdetalle.RootTable.Columns("cbpMecanico")
             .Width = 140
             .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
             .Visible = True
             .FormatString = "0.00"
-            .Caption = "P.Mecánico $"
+            .Caption = "P.Mayorista Bs."
         End With
         With grdetalle
             .GroupByBoxVisible = False
@@ -756,7 +757,7 @@ Public Class F0_MCompras
             .Width = 150
             .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
             .Visible = True
-            .Caption = "TOTAL $"
+            .Caption = "TOTAL Bs."
             .FormatString = "0.00"
         End With
         With grCompra.RootTable.Columns("caemision")
@@ -1665,10 +1666,10 @@ salirIf:
                         ''Cálculo de los demás precios
                         pFacturado = grdetalle.GetValue("cbpFacturado")
 
-                        CType(grdetalle.DataSource, DataTable).Rows(pos).Item("cbpPublico") = Math.Round(pFacturado - (pFacturado * 0.1), 2)
-                        grdetalle.SetValue("cbpPublico", Math.Round(pFacturado - (pFacturado * 0.1), 2))
-                        CType(grdetalle.DataSource, DataTable).Rows(pos).Item("cbpMecanico") = Math.Round(pFacturado - (pFacturado * 0.15), 2)
-                        grdetalle.SetValue("cbpMecanico", Math.Round(pFacturado - (pFacturado * 0.15), 2))
+                        'CType(grdetalle.DataSource, DataTable).Rows(pos).Item("cbpPublico") = Math.Round(pFacturado - (pFacturado * 0.1), 2)
+                        'grdetalle.SetValue("cbpPublico", Math.Round(pFacturado - (pFacturado * 0.1), 2))
+                        'CType(grdetalle.DataSource, DataTable).Rows(pos).Item("cbpMecanico") = Math.Round(pFacturado - (pFacturado * 0.15), 2)
+                        'grdetalle.SetValue("cbpMecanico", Math.Round(pFacturado - (pFacturado * 0.15), 2))
                     Else
 
                         Dim cantidad As Double = grdetalle.GetValue("cbcmin")
@@ -1697,10 +1698,10 @@ salirIf:
                         ''Cálculo de los demás precios
                         pFacturado = grdetalle.GetValue("cbpFacturado")
 
-                        CType(grdetalle.DataSource, DataTable).Rows(pos).Item("cbpPublico") = pFacturado - (pFacturado * 0.1)
-                        grdetalle.SetValue("cbpPublico", pFacturado - (pFacturado * 0.1))
-                        CType(grdetalle.DataSource, DataTable).Rows(pos).Item("cbpMecanico") = pFacturado - (pFacturado * 0.15)
-                        grdetalle.SetValue("cbpMecanico", pFacturado - (pFacturado * 0.15))
+                        'CType(grdetalle.DataSource, DataTable).Rows(pos).Item("cbpPublico") = pFacturado - (pFacturado * 0.1)
+                        'grdetalle.SetValue("cbpPublico", pFacturado - (pFacturado * 0.1))
+                        'CType(grdetalle.DataSource, DataTable).Rows(pos).Item("cbpMecanico") = pFacturado - (pFacturado * 0.15)
+                        'grdetalle.SetValue("cbpMecanico", pFacturado - (pFacturado * 0.15))
                     Else
                         CType(grdetalle.DataSource, DataTable).Rows(pos).Item("cbpFacturado") = 0
                         grdetalle.SetValue("cbpFacturado", 0)

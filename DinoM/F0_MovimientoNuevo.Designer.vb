@@ -99,7 +99,7 @@ Partial Class F0_MovimientoNuevo
         'PanelSuperior
         '
         Me.PanelSuperior.Margin = New System.Windows.Forms.Padding(4)
-        Me.PanelSuperior.Size = New System.Drawing.Size(1394, 72)
+        Me.PanelSuperior.Size = New System.Drawing.Size(1324, 72)
         Me.PanelSuperior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelSuperior.Style.BackColor1.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(150, Byte), Integer))
         Me.PanelSuperior.Style.BackColor2.Color = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(150, Byte), Integer))
@@ -116,9 +116,9 @@ Partial Class F0_MovimientoNuevo
         '
         'PanelInferior
         '
-        Me.PanelInferior.Location = New System.Drawing.Point(0, 570)
+        Me.PanelInferior.Location = New System.Drawing.Point(0, 622)
         Me.PanelInferior.Margin = New System.Windows.Forms.Padding(4)
-        Me.PanelInferior.Size = New System.Drawing.Size(1394, 39)
+        Me.PanelInferior.Size = New System.Drawing.Size(1324, 39)
         Me.PanelInferior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelInferior.Style.BackColor1.Color = System.Drawing.Color.Transparent
         Me.PanelInferior.Style.BackColor2.Color = System.Drawing.Color.Transparent
@@ -175,13 +175,13 @@ Partial Class F0_MovimientoNuevo
         '
         'PanelToolBar2
         '
-        Me.PanelToolBar2.Location = New System.Drawing.Point(1314, 0)
+        Me.PanelToolBar2.Location = New System.Drawing.Point(1244, 0)
         Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(4)
         '
         'PanelPrincipal
         '
         Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(4)
-        Me.PanelPrincipal.Size = New System.Drawing.Size(1394, 609)
+        Me.PanelPrincipal.Size = New System.Drawing.Size(1324, 661)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelInferior, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelUsuario, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelSuperior, 0)
@@ -205,7 +205,7 @@ Partial Class F0_MovimientoNuevo
         '
         'MPanelUserAct
         '
-        Me.MPanelUserAct.Location = New System.Drawing.Point(1194, 0)
+        Me.MPanelUserAct.Location = New System.Drawing.Point(1124, 0)
         Me.MPanelUserAct.Margin = New System.Windows.Forms.Padding(4)
         '
         'MRlAccion
@@ -215,24 +215,24 @@ Partial Class F0_MovimientoNuevo
         '
         Me.MRlAccion.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.MRlAccion.Margin = New System.Windows.Forms.Padding(4)
-        Me.MRlAccion.Size = New System.Drawing.Size(938, 72)
+        Me.MRlAccion.Size = New System.Drawing.Size(868, 72)
         '
         'PanelContent
         '
         Me.PanelContent.Controls.Add(Me.GroupPanel3)
         Me.PanelContent.Controls.Add(Me.GroupPanel1)
         Me.PanelContent.Margin = New System.Windows.Forms.Padding(4)
-        Me.PanelContent.Size = New System.Drawing.Size(1361, 498)
+        Me.PanelContent.Size = New System.Drawing.Size(1291, 550)
         '
         'Panel1
         '
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
-        Me.Panel1.Size = New System.Drawing.Size(1394, 498)
+        Me.Panel1.Size = New System.Drawing.Size(1324, 550)
         '
         'MSuperTabControlPanel1
         '
         Me.MSuperTabControlPanel1.Margin = New System.Windows.Forms.Padding(4)
-        Me.MSuperTabControlPanel1.Size = New System.Drawing.Size(1361, 498)
+        Me.MSuperTabControlPanel1.Size = New System.Drawing.Size(1291, 550)
         '
         'MSuperTabControl
         '
@@ -251,14 +251,14 @@ Partial Class F0_MovimientoNuevo
         Me.MSuperTabControl.ControlBox.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.MSuperTabControl.ControlBox.MenuBox, Me.MSuperTabControl.ControlBox.CloseBox})
         Me.MSuperTabControl.Controls.Add(Me.SuperTabControlPanel2)
         Me.MSuperTabControl.Margin = New System.Windows.Forms.Padding(4)
-        Me.MSuperTabControl.Size = New System.Drawing.Size(1394, 498)
+        Me.MSuperTabControl.Size = New System.Drawing.Size(1324, 550)
         Me.MSuperTabControl.Tabs.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.SuperTabItem2})
         Me.MSuperTabControl.Controls.SetChildIndex(Me.SuperTabControlPanel2, 0)
         Me.MSuperTabControl.Controls.SetChildIndex(Me.MSuperTabControlPanel1, 0)
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(1121, 0)
+        Me.PictureBox1.Location = New System.Drawing.Point(1051, 0)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         '
         'GroupPanel3
@@ -271,7 +271,7 @@ Partial Class F0_MovimientoNuevo
         Me.GroupPanel3.Font = New System.Drawing.Font("Georgia", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanel3.Location = New System.Drawing.Point(0, 227)
         Me.GroupPanel3.Name = "GroupPanel3"
-        Me.GroupPanel3.Size = New System.Drawing.Size(1361, 271)
+        Me.GroupPanel3.Size = New System.Drawing.Size(1291, 323)
         '
         '
         '
@@ -314,7 +314,7 @@ Partial Class F0_MovimientoNuevo
         Me.grdetalle.Name = "grdetalle"
         Me.grdetalle.Office2007ColorScheme = Janus.Windows.GridEX.Office2007ColorScheme.Custom
         Me.grdetalle.Office2007CustomColor = System.Drawing.Color.DodgerBlue
-        Me.grdetalle.Size = New System.Drawing.Size(1355, 248)
+        Me.grdetalle.Size = New System.Drawing.Size(1285, 300)
         Me.grdetalle.TabIndex = 0
         Me.grdetalle.VisualStyle = Janus.Windows.GridEX.VisualStyle.Office2007
         '
@@ -328,7 +328,7 @@ Partial Class F0_MovimientoNuevo
         Me.GroupPanel1.Font = New System.Drawing.Font("Georgia", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupPanel1.Location = New System.Drawing.Point(0, 0)
         Me.GroupPanel1.Name = "GroupPanel1"
-        Me.GroupPanel1.Size = New System.Drawing.Size(1361, 227)
+        Me.GroupPanel1.Size = New System.Drawing.Size(1291, 227)
         '
         '
         '
@@ -380,7 +380,7 @@ Partial Class F0_MovimientoNuevo
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1355, 204)
+        Me.Panel2.Size = New System.Drawing.Size(1285, 204)
         Me.Panel2.TabIndex = 0
         '
         'Panel_AlmacenGrupoTraspaso
@@ -388,7 +388,7 @@ Partial Class F0_MovimientoNuevo
         Me.Panel_AlmacenGrupoTraspaso.Controls.Add(Me.grAlmacenSalida)
         Me.Panel_AlmacenGrupoTraspaso.Controls.Add(Me.Panel5)
         Me.Panel_AlmacenGrupoTraspaso.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel_AlmacenGrupoTraspaso.Location = New System.Drawing.Point(395, 0)
+        Me.Panel_AlmacenGrupoTraspaso.Location = New System.Drawing.Point(325, 0)
         Me.Panel_AlmacenGrupoTraspaso.Name = "Panel_AlmacenGrupoTraspaso"
         Me.Panel_AlmacenGrupoTraspaso.Size = New System.Drawing.Size(480, 204)
         Me.Panel_AlmacenGrupoTraspaso.TabIndex = 238
@@ -438,7 +438,7 @@ Partial Class F0_MovimientoNuevo
         Me.Panel_AlmacenGrupo.Controls.Add(Me.grAlmacen)
         Me.Panel_AlmacenGrupo.Controls.Add(Me.Panel4)
         Me.Panel_AlmacenGrupo.Dock = System.Windows.Forms.DockStyle.Right
-        Me.Panel_AlmacenGrupo.Location = New System.Drawing.Point(875, 0)
+        Me.Panel_AlmacenGrupo.Location = New System.Drawing.Point(805, 0)
         Me.Panel_AlmacenGrupo.Name = "Panel_AlmacenGrupo"
         Me.Panel_AlmacenGrupo.Size = New System.Drawing.Size(480, 204)
         Me.Panel_AlmacenGrupo.TabIndex = 237
@@ -898,7 +898,7 @@ Partial Class F0_MovimientoNuevo
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1394, 609)
+        Me.ClientSize = New System.Drawing.Size(1324, 661)
         Me.Location = New System.Drawing.Point(0, 0)
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "F0_MovimientoNuevo"

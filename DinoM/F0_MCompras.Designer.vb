@@ -522,12 +522,12 @@ Partial Class F0_MCompras
         Me.LabelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX10.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX10.ForeColor = System.Drawing.Color.White
-        Me.LabelX10.Location = New System.Drawing.Point(22, 5)
+        Me.LabelX10.Location = New System.Drawing.Point(5, 5)
         Me.LabelX10.Name = "LabelX10"
         Me.LabelX10.SingleLineColor = System.Drawing.SystemColors.Control
         Me.LabelX10.Size = New System.Drawing.Size(101, 18)
         Me.LabelX10.TabIndex = 40
-        Me.LabelX10.Text = "Subtotal $:"
+        Me.LabelX10.Text = "Subtotal Bs:"
         '
         'tbPdesc
         '
@@ -591,12 +591,12 @@ Partial Class F0_MCompras
         Me.LabelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX11.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX11.ForeColor = System.Drawing.Color.White
-        Me.LabelX11.Location = New System.Drawing.Point(22, 52)
+        Me.LabelX11.Location = New System.Drawing.Point(5, 52)
         Me.LabelX11.Name = "LabelX11"
         Me.LabelX11.SingleLineColor = System.Drawing.SystemColors.Control
-        Me.LabelX11.Size = New System.Drawing.Size(54, 18)
+        Me.LabelX11.Size = New System.Drawing.Size(64, 18)
         Me.LabelX11.TabIndex = 38
-        Me.LabelX11.Text = "Total $:"
+        Me.LabelX11.Text = "Total Bs:"
         '
         'LabelX9
         '
@@ -607,12 +607,12 @@ Partial Class F0_MCompras
         Me.LabelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.LabelX9.Font = New System.Drawing.Font("Georgia", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LabelX9.ForeColor = System.Drawing.Color.White
-        Me.LabelX9.Location = New System.Drawing.Point(22, 28)
+        Me.LabelX9.Location = New System.Drawing.Point(5, 28)
         Me.LabelX9.Name = "LabelX9"
         Me.LabelX9.SingleLineColor = System.Drawing.SystemColors.Control
-        Me.LabelX9.Size = New System.Drawing.Size(101, 18)
+        Me.LabelX9.Size = New System.Drawing.Size(115, 18)
         Me.LabelX9.TabIndex = 36
-        Me.LabelX9.Text = "M. Descuento $:"
+        Me.LabelX9.Text = "M. Descuento Bs:"
         '
         'PanelContentSup
         '

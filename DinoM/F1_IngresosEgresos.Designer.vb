@@ -169,9 +169,6 @@ Partial Class F1_IngresosEgresos
         'btnSalir
         '
         '
-        'btnGrabar
-        '
-        '
         'btnModificar
         '
         '
@@ -685,7 +682,7 @@ Partial Class F1_IngresosEgresos
         Me.LabelX3.SingleLineColor = System.Drawing.SystemColors.Control
         Me.LabelX3.Size = New System.Drawing.Size(148, 23)
         Me.LabelX3.TabIndex = 25
-        Me.LabelX3.Text = "Monto $:"
+        Me.LabelX3.Text = "Monto Bs.:"
         '
         'swTipo
         '
