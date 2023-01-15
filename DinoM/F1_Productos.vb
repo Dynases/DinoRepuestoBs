@@ -61,7 +61,7 @@ Public Class F1_Productos
         _prCargarComboLibreria(cbUniVenta, 1, 6)
         _prCargarComboLibreria(cbUnidMaxima, 1, 6)
         dtPrecioAll = L_fnGeneralProductosDescuentosAll()
-        dtImagenesAll = L_prCargarImagenesProductoAll()
+        dtImagenesAll = L_prCargarImagenesProducto(-2)
         _prAsignarPermisos()
         armarGrillaDetalleProducto(0)
         _PMIniciarTodo()
@@ -278,7 +278,7 @@ Public Class F1_Productos
             End If
             If (estado = -1) Then
                 Try
-                    Me.pbImgProdu.Image.Dispose()
+                    'Me.pbImgProdu.Image.Dispose()
                     Me.pbImgProdu.Image = Nothing
                     Application.DoEvents()
                     TablaImagenes.Rows(i).Item("img") = Nothing
@@ -724,7 +724,7 @@ Public Class F1_Productos
             tbCodigo.Focus()
             Limpiar = True
             dtPrecioAll = L_fnGeneralProductosDescuentosAll()
-            dtImagenesAll = L_prCargarImagenesProductoAll()
+            dtImagenesAll = L_prCargarImagenesProducto(-2)
         Else
             Dim img As Bitmap = New Bitmap(My.Resources.cancel, 50, 50)
             ToastNotification.Show(Me, "El producto no pudo ser insertado".ToUpper, img, 2000, eToastGlowColor.Red, eToastPosition.BottomCenter)
@@ -756,7 +756,7 @@ Public Class F1_Productos
                                       eToastGlowColor.Green,
                                       eToastPosition.TopCenter)
             dtPrecioAll = L_fnGeneralProductosDescuentosAll()
-            dtImagenesAll = L_prCargarImagenesProductoAll()
+            dtImagenesAll = L_prCargarImagenesProducto(-2)
 
         Else
             Dim img As Bitmap = New Bitmap(My.Resources.cancel, 50, 50)
@@ -956,9 +956,9 @@ Public Class F1_Productos
         listEstCeldas.Add(New Modelo.Celda("yffact", False))
         listEstCeldas.Add(New Modelo.Celda("yfhact", False))
         listEstCeldas.Add(New Modelo.Celda("yfuact", False))
-        listEstCeldas.Add(New Modelo.Celda("VentaFacturado", True, "P. Facturado", 80, "0.00"))
-        listEstCeldas.Add(New Modelo.Celda("VentaNormal", True, "P. Público", 80, "0.00"))
-        listEstCeldas.Add(New Modelo.Celda("VentaMecanico", True, "P. Mayorista", 80, "0.00"))
+        listEstCeldas.Add(New Modelo.Celda("VentaFacturado", True, "Precio 1", 80, "0.00"))
+        listEstCeldas.Add(New Modelo.Celda("VentaNormal", True, "Precio 2", 80, "0.00"))
+        listEstCeldas.Add(New Modelo.Celda("VentaMecanico", True, "Precio 3", 80, "0.00"))
 
         listEstCeldas.Add(New Modelo.Celda("PrecioCosto", False))
         listEstCeldas.Add(New Modelo.Celda("yfcdprod1", False, "Descripcion".ToUpper, 150))
@@ -2282,6 +2282,5 @@ Public Class F1_Productos
     Private Sub JG_HistPrecios_EditingCell(sender As Object, e As EditingCellEventArgs) Handles JG_HistPrecios.EditingCell
         e.Cancel = True
     End Sub
-
 
 End Class

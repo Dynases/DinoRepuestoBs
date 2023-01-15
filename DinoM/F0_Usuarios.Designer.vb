@@ -103,7 +103,7 @@ Partial Class F0_Usuarios
         Me.SuperTabPrincipal.ControlBox.MenuBox.Name = ""
         Me.SuperTabPrincipal.ControlBox.Name = ""
         Me.SuperTabPrincipal.ControlBox.SubItems.AddRange(New DevComponents.DotNetBar.BaseItem() {Me.SuperTabPrincipal.ControlBox.MenuBox, Me.SuperTabPrincipal.ControlBox.CloseBox})
-        Me.SuperTabPrincipal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SuperTabPrincipal.Margin = New System.Windows.Forms.Padding(4)
         Me.SuperTabPrincipal.SelectedTabIndex = 1
         Me.SuperTabPrincipal.Size = New System.Drawing.Size(1362, 609)
         Me.SuperTabPrincipal.Controls.SetChildIndex(Me.SuperTabControlPanelRegistro, 0)
@@ -112,7 +112,7 @@ Partial Class F0_Usuarios
         'SuperTabControlPanelBuscador
         '
         Me.SuperTabControlPanelBuscador.Location = New System.Drawing.Point(0, 0)
-        Me.SuperTabControlPanelBuscador.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SuperTabControlPanelBuscador.Margin = New System.Windows.Forms.Padding(4)
         Me.SuperTabControlPanelBuscador.Size = New System.Drawing.Size(852, 561)
         '
         'SupTabItemBusqueda
@@ -121,7 +121,7 @@ Partial Class F0_Usuarios
         '
         'SuperTabControlPanelRegistro
         '
-        Me.SuperTabControlPanelRegistro.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.SuperTabControlPanelRegistro.Margin = New System.Windows.Forms.Padding(4)
         Me.SuperTabControlPanelRegistro.Size = New System.Drawing.Size(1330, 609)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelSuperior, 0)
         Me.SuperTabControlPanelRegistro.Controls.SetChildIndex(Me.PanelInferior, 0)
@@ -129,7 +129,7 @@ Partial Class F0_Usuarios
         '
         'PanelSuperior
         '
-        Me.PanelSuperior.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelSuperior.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelSuperior.Size = New System.Drawing.Size(1330, 72)
         Me.PanelSuperior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelSuperior.Style.BackColor1.Color = System.Drawing.Color.Yellow
@@ -148,7 +148,7 @@ Partial Class F0_Usuarios
         'PanelInferior
         '
         Me.PanelInferior.Location = New System.Drawing.Point(0, 570)
-        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelInferior.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelInferior.Size = New System.Drawing.Size(1330, 39)
         Me.PanelInferior.Style.Alignment = System.Drawing.StringAlignment.Center
         Me.PanelInferior.Style.BackColor1.Color = System.Drawing.Color.Gold
@@ -184,7 +184,7 @@ Partial Class F0_Usuarios
         '
         'TxtNombreUsu
         '
-        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TxtNombreUsu.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtNombreUsu.Size = New System.Drawing.Size(135, 32)
         '
         'btnSalir
@@ -208,13 +208,13 @@ Partial Class F0_Usuarios
         'PanelToolBar2
         '
         Me.PanelToolBar2.Location = New System.Drawing.Point(1250, 0)
-        Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelToolBar2.Margin = New System.Windows.Forms.Padding(4)
         '
         'PanelPrincipal
         '
         Me.PanelPrincipal.Controls.Add(Me.GroupPanel1)
         Me.PanelPrincipal.Controls.Add(Me.Panel1)
-        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PanelPrincipal.Margin = New System.Windows.Forms.Padding(4)
         Me.PanelPrincipal.Size = New System.Drawing.Size(1330, 498)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.PanelUsuario, 0)
         Me.PanelPrincipal.Controls.SetChildIndex(Me.Panel1, 0)
@@ -241,7 +241,7 @@ Partial Class F0_Usuarios
         'MPanelUserAct
         '
         Me.MPanelUserAct.Location = New System.Drawing.Point(1130, 0)
-        Me.MPanelUserAct.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MPanelUserAct.Margin = New System.Windows.Forms.Padding(4)
         '
         'MRlAccion
         '
@@ -249,7 +249,7 @@ Partial Class F0_Usuarios
         '
         '
         Me.MRlAccion.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
-        Me.MRlAccion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MRlAccion.Margin = New System.Windows.Forms.Padding(4)
         Me.MRlAccion.Size = New System.Drawing.Size(874, 72)
         '
         'Tb_fuenteTam
@@ -519,9 +519,9 @@ Partial Class F0_Usuarios
         Me.LabelX15.Location = New System.Drawing.Point(815, 98)
         Me.LabelX15.Name = "LabelX15"
         Me.LabelX15.SingleLineColor = System.Drawing.SystemColors.Control
-        Me.LabelX15.Size = New System.Drawing.Size(143, 16)
+        Me.LabelX15.Size = New System.Drawing.Size(57, 16)
         Me.LabelX15.TabIndex = 248
-        Me.LabelX15.Text = "Prec. Venta Mayorista:"
+        Me.LabelX15.Text = "Precio 3:"
         '
         'swVentaNormal
         '
@@ -557,9 +557,9 @@ Partial Class F0_Usuarios
         Me.LabelX14.Location = New System.Drawing.Point(815, 71)
         Me.LabelX14.Name = "LabelX14"
         Me.LabelX14.SingleLineColor = System.Drawing.SystemColors.Control
-        Me.LabelX14.Size = New System.Drawing.Size(128, 16)
+        Me.LabelX14.Size = New System.Drawing.Size(57, 16)
         Me.LabelX14.TabIndex = 246
-        Me.LabelX14.Text = "Prec. Venta Normal:"
+        Me.LabelX14.Text = "Precio 2:"
         '
         'swVentaFacturado
         '
@@ -595,9 +595,9 @@ Partial Class F0_Usuarios
         Me.LabelX13.Location = New System.Drawing.Point(815, 45)
         Me.LabelX13.Name = "LabelX13"
         Me.LabelX13.SingleLineColor = System.Drawing.SystemColors.Control
-        Me.LabelX13.Size = New System.Drawing.Size(144, 16)
+        Me.LabelX13.Size = New System.Drawing.Size(56, 16)
         Me.LabelX13.TabIndex = 244
-        Me.LabelX13.Text = "Prec. Venta Facturado:"
+        Me.LabelX13.Text = "Precio 1:"
         '
         'tbDescuento
         '
@@ -610,7 +610,7 @@ Partial Class F0_Usuarios
         Me.tbDescuento.Font = New System.Drawing.Font("Calibri", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbDescuento.Increment = 1.0R
         Me.tbDescuento.Location = New System.Drawing.Point(974, 18)
-        Me.tbDescuento.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.tbDescuento.Margin = New System.Windows.Forms.Padding(2)
         Me.tbDescuento.Name = "tbDescuento"
         Me.tbDescuento.Size = New System.Drawing.Size(105, 24)
         Me.tbDescuento.TabIndex = 243
@@ -973,7 +973,7 @@ Partial Class F0_Usuarios
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1362, 609)
         Me.Location = New System.Drawing.Point(0, 0)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "F0_Usuarios"
         Me.Opacity = 0.05R
         Me.Text = "F0_Usuarios"

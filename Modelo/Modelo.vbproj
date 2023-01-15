@@ -92,25 +92,25 @@
       <HintPath>C:\librerias\DevComponents.TreeGX.dll</HintPath>
     </Reference>
     <Reference Include="FlashControlV71">
-      <HintPath>C:\librerias\FlashControlV71.dll</HintPath>
+      <HintPath>C:\libreriasDiego\FlashControlV71.dll</HintPath>
     </Reference>
     <Reference Include="Janus.Data.v3">
-      <HintPath>C:\librerias\Janus\Janus.Data.v3.dll</HintPath>
+      <HintPath>C:\libreriasDiego\Janus\Janus.Data.v3.dll</HintPath>
     </Reference>
     <Reference Include="Janus.Windows.CalendarCombo.v3">
-      <HintPath>C:\librerias\Janus\Janus.Windows.CalendarCombo.v3.dll</HintPath>
+      <HintPath>C:\libreriasDiego\Janus\Janus.Windows.CalendarCombo.v3.dll</HintPath>
     </Reference>
     <Reference Include="Janus.Windows.Common.v3">
-      <HintPath>C:\librerias\Janus\Janus.Windows.Common.v3.dll</HintPath>
+      <HintPath>C:\libreriasDiego\Janus\Janus.Windows.Common.v3.dll</HintPath>
     </Reference>
     <Reference Include="Janus.Windows.GridEX.v3">
-      <HintPath>C:\librerias\Janus\Janus.Windows.GridEX.v3.dll</HintPath>
+      <HintPath>C:\libreriasDiego\Janus\Janus.Windows.GridEX.v3.dll</HintPath>
     </Reference>
     <Reference Include="Janus.Windows.Ribbon.v3">
-      <HintPath>C:\librerias\Janus\Janus.Windows.Ribbon.v3.dll</HintPath>
+      <HintPath>C:\libreriasDiego\Janus\Janus.Windows.Ribbon.v3.dll</HintPath>
     </Reference>
     <Reference Include="Janus.Windows.UI.v3">
-      <HintPath>C:\librerias\Janus\Janus.Windows.UI.v3.dll</HintPath>
+      <HintPath>C:\libreriasDiego\Janus\Janus.Windows.UI.v3.dll</HintPath>
     </Reference>
     <Reference Include="SAPBusinessObjects.WPF.Viewer, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
