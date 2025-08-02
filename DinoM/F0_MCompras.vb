@@ -525,7 +525,7 @@ Public Class F0_MCompras
             .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
             .Visible = True
             .FormatString = "0.00"
-            .Caption = "P.CostoUn.(Bs.)"
+            .Caption = "P.CostoUn.($us.)"
         End With
         If (_estadoPor = 1) Then
             With grdetalle.RootTable.Columns("cbutven")
@@ -564,7 +564,7 @@ Public Class F0_MCompras
             .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
             .Visible = True
             .FormatString = "0.00"
-            .Caption = "Sub Total (Bs.)"
+            .Caption = "Sub Total ($us.)"
         End With
         With grdetalle.RootTable.Columns("cbobs")
             .Width = 50
@@ -612,21 +612,21 @@ Public Class F0_MCompras
             .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
             .Visible = True
             .FormatString = "0.00"
-            .Caption = "P.Facturado Bs."
+            .Caption = "P.Facturado $us."
         End With
         With grdetalle.RootTable.Columns("cbpPublico")
             .Width = 140
             .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
             .Visible = True
             .FormatString = "0.00"
-            .Caption = "P.Público Bs."
+            .Caption = "P.Público $us."
         End With
         With grdetalle.RootTable.Columns("cbpMecanico")
             .Width = 140
             .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
             .Visible = True
             .FormatString = "0.00"
-            .Caption = "P.Mayorista Bs."
+            .Caption = "P.Mayorista $us."
         End With
         With grdetalle
             .GroupByBoxVisible = False
@@ -757,7 +757,7 @@ Public Class F0_MCompras
             .Width = 150
             .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
             .Visible = True
-            .Caption = "TOTAL Bs."
+            .Caption = "TOTAL $us."
             .FormatString = "0.00"
         End With
         With grCompra.RootTable.Columns("caemision")

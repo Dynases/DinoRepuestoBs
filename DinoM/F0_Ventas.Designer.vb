@@ -106,6 +106,8 @@ Partial Class F0_Ventas
         Me.TbNombre1 = New DevComponents.DotNetBar.Controls.TextBoxX()
         Me.LabelX6 = New DevComponents.DotNetBar.LabelX()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.LabelX22 = New DevComponents.DotNetBar.LabelX()
+        Me.tbSubTotalD = New DevComponents.Editors.DoubleInput()
         Me.LabelX13 = New DevComponents.DotNetBar.LabelX()
         Me.tbSubTotal = New DevComponents.Editors.DoubleInput()
         Me.tbIce = New DevComponents.Editors.DoubleInput()
@@ -170,6 +172,7 @@ Partial Class F0_Ventas
         Me.GroupPanelFactura.SuspendLayout()
         CType(Me.QrFactura, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel4.SuspendLayout()
+        CType(Me.tbSubTotalD, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tbSubTotal, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tbIce, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.tbMdesc, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -1874,6 +1877,8 @@ Partial Class F0_Ventas
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.Transparent
+        Me.Panel4.Controls.Add(Me.LabelX22)
+        Me.Panel4.Controls.Add(Me.tbSubTotalD)
         Me.Panel4.Controls.Add(Me.LabelX13)
         Me.Panel4.Controls.Add(Me.tbSubTotal)
         Me.Panel4.Controls.Add(Me.tbIce)
@@ -1890,6 +1895,40 @@ Partial Class F0_Ventas
         Me.Panel4.Size = New System.Drawing.Size(330, 90)
         Me.Panel4.TabIndex = 39
         '
+        'LabelX22
+        '
+        Me.LabelX22.BackColor = System.Drawing.Color.Transparent
+        '
+        '
+        '
+        Me.LabelX22.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.LabelX22.Font = New System.Drawing.Font("Georgia", 8.5!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LabelX22.ForeColor = System.Drawing.Color.White
+        Me.LabelX22.Location = New System.Drawing.Point(116, 25)
+        Me.LabelX22.Name = "LabelX22"
+        Me.LabelX22.SingleLineColor = System.Drawing.SystemColors.Control
+        Me.LabelX22.Size = New System.Drawing.Size(95, 18)
+        Me.LabelX22.TabIndex = 44
+        Me.LabelX22.Text = "Sub Total ($us):"
+        '
+        'tbSubTotalD
+        '
+        '
+        '
+        '
+        Me.tbSubTotalD.BackgroundStyle.Class = "DateTimeInputBackground"
+        Me.tbSubTotalD.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
+        Me.tbSubTotalD.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
+        Me.tbSubTotalD.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbSubTotalD.Increment = 1.0R
+        Me.tbSubTotalD.Location = New System.Drawing.Point(223, 23)
+        Me.tbSubTotalD.LockUpdateChecked = False
+        Me.tbSubTotalD.MinValue = 0R
+        Me.tbSubTotalD.Name = "tbSubTotalD"
+        Me.tbSubTotalD.Size = New System.Drawing.Size(89, 20)
+        Me.tbSubTotalD.TabIndex = 43
+        Me.tbSubTotalD.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right
+        '
         'LabelX13
         '
         Me.LabelX13.BackColor = System.Drawing.Color.Transparent
@@ -1902,9 +1941,9 @@ Partial Class F0_Ventas
         Me.LabelX13.Location = New System.Drawing.Point(116, 3)
         Me.LabelX13.Name = "LabelX13"
         Me.LabelX13.SingleLineColor = System.Drawing.SystemColors.Control
-        Me.LabelX13.Size = New System.Drawing.Size(86, 18)
+        Me.LabelX13.Size = New System.Drawing.Size(95, 18)
         Me.LabelX13.TabIndex = 42
-        Me.LabelX13.Text = "Sub Total:"
+        Me.LabelX13.Text = "Sub Total (Bs):"
         '
         'tbSubTotal
         '
@@ -1934,7 +1973,7 @@ Partial Class F0_Ventas
         Me.tbIce.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
         Me.tbIce.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbIce.Increment = 1.0R
-        Me.tbIce.Location = New System.Drawing.Point(75, 39)
+        Me.tbIce.Location = New System.Drawing.Point(76, 46)
         Me.tbIce.MinValue = 0R
         Me.tbIce.Name = "tbIce"
         Me.tbIce.Size = New System.Drawing.Size(19, 21)
@@ -2001,12 +2040,13 @@ Partial Class F0_Ventas
         Me.lbPDescuento.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square
         Me.lbPDescuento.Font = New System.Drawing.Font("Georgia", 8.5!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbPDescuento.ForeColor = System.Drawing.Color.White
-        Me.lbPDescuento.Location = New System.Drawing.Point(116, 24)
+        Me.lbPDescuento.Location = New System.Drawing.Point(19, 6)
         Me.lbPDescuento.Name = "lbPDescuento"
         Me.lbPDescuento.SingleLineColor = System.Drawing.SystemColors.Control
         Me.lbPDescuento.Size = New System.Drawing.Size(86, 18)
         Me.lbPDescuento.TabIndex = 34
         Me.lbPDescuento.Text = "P. Descuento:"
+        Me.lbPDescuento.Visible = False
         '
         'LabelX11
         '
@@ -2035,12 +2075,13 @@ Partial Class F0_Ventas
         Me.tbPdesc.ButtonFreeText.Shortcut = DevComponents.DotNetBar.eShortcut.F2
         Me.tbPdesc.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tbPdesc.Increment = 1.0R
-        Me.tbPdesc.Location = New System.Drawing.Point(223, 23)
+        Me.tbPdesc.Location = New System.Drawing.Point(16, 23)
         Me.tbPdesc.LockUpdateChecked = False
         Me.tbPdesc.MinValue = 0R
         Me.tbPdesc.Name = "tbPdesc"
         Me.tbPdesc.Size = New System.Drawing.Size(89, 20)
         Me.tbPdesc.TabIndex = 1
+        Me.tbPdesc.Visible = False
         Me.tbPdesc.WatermarkAlignment = DevComponents.Editors.eTextAlignment.Right
         '
         'lbMDescuento
@@ -2165,6 +2206,7 @@ Partial Class F0_Ventas
         CType(Me.QrFactura, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel4.ResumeLayout(False)
         Me.Panel4.PerformLayout()
+        CType(Me.tbSubTotalD, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tbSubTotal, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tbIce, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.tbMdesc, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2266,4 +2308,6 @@ Partial Class F0_Ventas
     Friend WithEvents cbCambioDolar As Janus.Windows.GridEX.EditControls.MultiColumnCombo
     Friend WithEvents btAgregarTCambio As DevComponents.DotNetBar.ButtonX
     Friend WithEvents LabelX19 As DevComponents.DotNetBar.LabelX
+    Friend WithEvents LabelX22 As DevComponents.DotNetBar.LabelX
+    Friend WithEvents tbSubTotalD As DevComponents.Editors.DoubleInput
 End Class

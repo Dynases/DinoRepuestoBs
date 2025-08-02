@@ -203,21 +203,21 @@ Public Class F0_BuscarProductos
             .Width = 80
             .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
             .Visible = True
-            .Caption = "Facturado"
+            .Caption = "Facturado $us"
             .FormatString = "0.00"
         End With
         With grProductos.RootTable.Columns("PrecioPublico")
             .Width = 80
             .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
             .Visible = True
-            .Caption = "Publico"
+            .Caption = "Publico $us"
             .FormatString = "0.00"
         End With
         With grProductos.RootTable.Columns("PrecioMecanico")
             .Width = 80
             .CellStyle.TextAlignment = Janus.Windows.GridEX.TextAlignment.Far
             .Visible = True
-            .Caption = "Mayorista"
+            .Caption = "Mayorista $us"
             .FormatString = "0.00"
         End With
 

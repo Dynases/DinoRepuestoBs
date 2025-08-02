@@ -27,6 +27,7 @@ Public Class P_Principal
     End Sub
     Private Sub _prIniciarTodo()
         'Leer Archivo de Configuración
+        VentanaVenta.Visible = False
         _prLeerArchivoConfig()
 
         L_prAbrirConexion(gs_Ip, gs_UsuarioSql, gs_ClaveSql, gs_NombreBD)

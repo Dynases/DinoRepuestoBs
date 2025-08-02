@@ -498,7 +498,7 @@ Public Class F0_DetalleCompras
             'ColAL(grProductos, "yhprecio", "Precio Costo", 90)
             'ColAL(grProductos, "venta", "Precio Venta", 90)
             For i As Integer = 0 To dt.Rows.Count - 1 Step 1
-                Dim nombre As String = dt.Rows(i).Item("yfnumi").ToString.ToUpper +
+                Dim nombre As String = dt.Rows(i).Item("yfcdprod1").ToString.ToUpper +
                     " " + dt.Rows(i).Item("Categoria").ToString.ToUpper +
                     " " + dt.Rows(i).Item("CodigoFabrica").ToString.ToUpper +
                     " " + dt.Rows(i).Item("CodigoMarca").ToString.ToUpper +

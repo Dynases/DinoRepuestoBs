@@ -1498,7 +1498,7 @@ Public Class F0_Ventas
         Dim numi As String = ""
         Dim tabla As DataTable = L_fnMostrarMontos(0)
         _prInsertarMontoNuevo(tabla)
-
+        actualizarPrecios2()
         Dim res As Boolean = L_fnGrabarVenta(numi, "", tbFechaVenta.Value.ToString("yyyy/MM/dd"), _CodEmpleado, IIf(swTipoVenta.Value = True, 1, 0), IIf(swTipoVenta.Value = True, Now.Date.ToString("yyyy/MM/dd"), tbFechaVenc.Value.ToString("yyyy/MM/dd")), _CodCliente, IIf(swMoneda.Value = True, 1, 0), tbObservacion.Text, tbMdesc.Value, tbIce.Value, tbtotal.Value, CType(grdetalle.DataSource, DataTable), cbSucursal.Value, IIf(SwProforma.Value = True, tbProforma.Text, 0), cbPrecio.Value, tabla)
 
         If res Then
@@ -1679,7 +1679,12 @@ Public Class F0_Ventas
             CType(grdetalle.DataSource, DataTable).Rows(pos).Item("producto") = dt.Rows(fila).Item("yfcdprod1")
             CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbumin") = dt.Rows(fila).Item("yfumin")
             CType(grdetalle.DataSource, DataTable).Rows(pos).Item("unidad") = dt.Rows(fila).Item("UnidMin")
-            CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbpbas") = dt.Rows(fila).Item("yhprecio")
+            If (tbCodigo.Text = String.Empty) Then
+                CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbpbas") = dt.Rows(fila).Item("yhprecio")
+            Else
+                CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbpbas") = dt.Rows(fila).Item("yhprecio") * CDbl(cbCambioDolar.Text)
+            End If
+
             CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbPrecioReferencia") = dt.Rows(fila).Item("PrecioReferencia")
 
 
@@ -1696,9 +1701,14 @@ Public Class F0_Ventas
 
 
             CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbPorcentajeReferencia") = Porcentaje
+            If (tbCodigo.Text = String.Empty) Then
+                CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbptot") = dt.Rows(fila).Item("yhprecio") * dt.Rows(fila).Item("Cantidad")
+                CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbtotdesc") = dt.Rows(fila).Item("yhprecio") * dt.Rows(fila).Item("Cantidad")
+            Else
+                CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbptot") = dt.Rows(fila).Item("yhprecio") * CDbl(cbCambioDolar.Text) * dt.Rows(fila).Item("Cantidad")
+                CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbtotdesc") = dt.Rows(fila).Item("yhprecio") * CDbl(cbCambioDolar.Text) * dt.Rows(fila).Item("Cantidad")
+            End If
 
-            CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbptot") = dt.Rows(fila).Item("yhprecio") * dt.Rows(fila).Item("Cantidad")
-            CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbtotdesc") = dt.Rows(fila).Item("yhprecio") * dt.Rows(fila).Item("Cantidad")
             CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbcmin") = dt.Rows(fila).Item("Cantidad")
             If (gb_FacturaIncluirICE) Then
                 CType(grdetalle.DataSource, DataTable).Rows(pos).Item("tbpcos") = dt.Rows(fila).Item("pcos") * dt.Rows(fila).Item("Cantidad")
@@ -3726,9 +3736,47 @@ salirIf:
             btAgregarTCambio.Visible = True
         Else
             btAgregarTCambio.Visible = False
+            If (tbCodigo.Text = String.Empty) Then
+                actualizarPrecios()
+            End If
+
         End If
     End Sub
 
+
+    Private Sub actualizarPrecios()
+        Dim tot, precio As Double
+        tot = 0
+        If btnNuevo.Enabled = False Then
+            For i = 0 To CType(grdetalle.DataSource, DataTable).Rows.Count - 1 Step 1
+                precio = CType(grdetalle.DataSource, DataTable).Rows(i).Item("tbPrecioReferencia") * CDbl(cbCambioDolar.Text)
+                CType(grdetalle.DataSource, DataTable).Rows(i).Item("tbpbas") = precio
+                CType(grdetalle.DataSource, DataTable).Rows(i).Item("tbptot") = precio * CType(grdetalle.DataSource, DataTable).Rows(i).Item("tbcmin")
+                CType(grdetalle.DataSource, DataTable).Rows(i).Item("tbtotdesc") = (precio * CType(grdetalle.DataSource, DataTable).Rows(i).Item("tbcmin")) - CType(grdetalle.DataSource, DataTable).Rows(i).Item("tbdesc")
+
+                tot = tot + (precio * CType(grdetalle.DataSource, DataTable).Rows(i).Item("tbcmin"))
+            Next
+        End If
+        tbSubTotal.Text = tot.ToString
+
+    End Sub
+    Private Sub actualizarPrecios2()
+        Dim tot, precio As Double
+        tot = 0
+        If btnNuevo.Enabled = False Then
+            For i = 0 To CType(grdetalle.DataSource, DataTable).Rows.Count - 1 Step 1
+                precio = CType(grdetalle.DataSource, DataTable).Rows(i).Item("tbpbas") / CDbl(cbCambioDolar.Text)
+                CType(grdetalle.DataSource, DataTable).Rows(i).Item("tbpbas") = precio
+                CType(grdetalle.DataSource, DataTable).Rows(i).Item("tbptot") = precio * CType(grdetalle.DataSource, DataTable).Rows(i).Item("tbcmin")
+                CType(grdetalle.DataSource, DataTable).Rows(i).Item("tbdesc") = CType(grdetalle.DataSource, DataTable).Rows(i).Item("tbdesc") / CDbl(cbCambioDolar.Text)
+                CType(grdetalle.DataSource, DataTable).Rows(i).Item("tbtotdesc") = (precio * CType(grdetalle.DataSource, DataTable).Rows(i).Item("tbcmin")) - CType(grdetalle.DataSource, DataTable).Rows(i).Item("tbdesc")
+
+                tot = tot + (precio * CType(grdetalle.DataSource, DataTable).Rows(i).Item("tbcmin"))
+            Next
+        End If
+        tbSubTotal.Text = tot.ToString
+
+    End Sub
     Private Sub btAgregarTCambio_Click(sender As Object, e As EventArgs) Handles btAgregarTCambio.Click
         Dim numi As String = ""
 
@@ -3774,6 +3822,10 @@ salirIf:
                 txtCambio1.Text = "0.00"
             End If
         End If
+    End Sub
+
+    Private Sub tbSubTotal_ValueChanged(sender As Object, e As EventArgs) Handles tbSubTotal.ValueChanged
+        tbSubTotalD.Value = tbSubTotal.Value / CDbl(cbCambioDolar.Text)
     End Sub
 
 
